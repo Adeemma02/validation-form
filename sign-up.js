@@ -38,7 +38,7 @@ btn.addEventListener("click", (e)=>{
     const   na = document.querySelector('.na');
     const   emm = document.querySelector('.emm');
     const   no = document.querySelector('.no');
-   let validNo = 0 - 9;
+    const   form = document.querySelector('form');
    if (name === ''){
 
     na.innerHTML = 
@@ -56,7 +56,7 @@ btn.addEventListener("click", (e)=>{
     emm.innerHTML=
     ' ** Please enter a valid email'
     na.innerHTML='';
-    return
+    return false;
    }
    if (inTxt === ''){
     txt.innerHTML = 
@@ -124,7 +124,7 @@ btn.addEventListener("click", (e)=>{
     emm.innerHTML=''
     return false;
    }
-   if (inno = +inno){
+   if (inno != +inno){
     no.innerHTML = 
     ' ** this is not a valid Moblie Number'
     pass.innerHTML='';
